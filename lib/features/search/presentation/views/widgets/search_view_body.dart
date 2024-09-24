@@ -1,4 +1,4 @@
-import 'package:bookly/core/utlis/styles.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/search/presentation/views/widgets/custom_search_text_feild.dart';
 import 'package:bookly/features/search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
