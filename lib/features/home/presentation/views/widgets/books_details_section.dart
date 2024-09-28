@@ -17,7 +17,10 @@ class BooksDetailsSection extends StatelessWidget {
             vertical: 24,
             horizontal: width * 0.11,
           ),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageUrl:
+                'https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg',
+          ),
         ),
         const SizedBox(height: 43),
         const Text(
