@@ -15,15 +15,19 @@ class HomeRepoImpl implements HomeRepo {
     try {
       var data = await apiService.get(
           endPoint:
-              'volumes?q=subject:Programming&Sorting=newest&Filtering=free-ebooks');
+              'volumes?q=computer science&Sorting=newest&Filtering=free-ebooks');
 
       List<BookModel> books = [];
       for (var item in data['items']) {
-        books.add(BookModel.fromJson(item));
+        try {
+          books.add(BookModel.fromJson(item));
+        } catch (e) {
+          books.add(BookModel.fromJson(item));
+        }
       }
 
       return right(books);
-    } on Exception catch (e) {
+    } catch (e) {
       if (e is DioException) {
         return left(
           ServerFailure.fromDioException(e),
