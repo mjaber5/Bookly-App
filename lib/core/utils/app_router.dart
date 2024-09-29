@@ -32,7 +32,7 @@ abstract class AppRouter {
         builder: (context, state) => BlocProvider(
           create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImpl>()),
           child: BookDetailsView(
-            books: state.extra as BookModel,
+            bookModel: state.extra as BookModel,
           ),
         ),
       ),
